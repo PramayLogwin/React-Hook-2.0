@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { createContext, useState } from 'react'
+import UseCustomHook from './component/customHook/UseCustomHook';
+// import UseRef from './component/UseRef';
+// import UseMemo from './component/UseMemo';
+// import UseCallback from './component/UseCallback';
+// import UseReducer from './component/UseReducer';
+// import UseContext from './component/UseContext';
+// import UseEffects from './component/UseEffect'
+// import UseState from './component/UseState'
+// import Header from './Header';
 
-function App() {
+
+export const useContextHook = createContext();
+
+export default function App() {
+
+  // const [text, setText] = useState({
+  //   id:1,
+  //   name:"hello"
+  // })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+      {/* <useContextHook.Provider value={{data:text.id + text.name}}> */}
+      {/* <useContextHook.Provider value={"Hello This Is Context Hook"}> */}
+        {/* <UseContext /> */}
+        {/* <UseReducer/> */}
+        {/* <UseCallback/> */}
+        {/* <UseMemo/> */}
+        {/* <UseRef/> */}
+        <UseCustomHook/>
+      {/* </useContextHook.Provider> */}
 
-export default App;
+    </>
+  )
+}
