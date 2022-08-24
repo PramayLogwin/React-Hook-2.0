@@ -7,7 +7,7 @@ export default function UseCustomHook() {
   const [counter, setCounter] = useState(0);
 
 
-  useCustomHookLogic(counter);
+  useCustomHookLogic();
   return (
     <>
       <p>Counter : {counter}</p>

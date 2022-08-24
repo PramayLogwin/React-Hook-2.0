@@ -9,9 +9,6 @@ export default function UseCallback() {
     setAge(age + 1);
     console.log("age render");
   }
-
-
-
   return (
     <>
       <div>

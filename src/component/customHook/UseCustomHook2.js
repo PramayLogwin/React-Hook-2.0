@@ -1,16 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 import useCustomHookLogic from './CustomHookLogic';
 
 export default function UseCustomHook2() {
 
-  const [counter, setCounter] = useState(0);
+  const [counter, increment, decrement, reset] = useCustomHookLogic();
 
 
-  useCustomHookLogic(counter);
   return (
     <>
       <p>Counter Two : {counter}</p>
-      <button onClick={() => setCounter(counter + 1)}>Click Here</button>
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Increment </button>
+      <button onClick={reset}>Reset</button>
     </>
   )
 }
